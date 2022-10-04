@@ -10,3 +10,4 @@ class Test_LoginPage(BaseTest):
         home_page = HomePage(self.driver)
         assert "OrangeHRM" == home_page.get_title()
         print("this is the title ", home_page.get_title())
+

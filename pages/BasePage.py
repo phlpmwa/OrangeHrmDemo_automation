@@ -19,6 +19,11 @@ class BasePage:
     def type(self, locator, value):
         if str(locator).endswith("_CSS"):
             self.driver.find_element(by=By.CSS_SELECTOR, value=read_config("locators", locator)).send_keys(value)
+        elif str(locator).endswith("_XPATH"):
+            self.driver.find_element(by=By.XPATH, value=read_config("locators", locator)).send_keys(value)
 
-
-
+    def elements(self, locator, index):
+        global count
+        if str(locator).endswith("_XPATH"):
+            count = self.driver.find_elements(by=By.XPATH, value=read_config("locators", locator))[index]
+        return count
