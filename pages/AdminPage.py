@@ -9,8 +9,9 @@ class AdminPage(BasePage):
 
     def add_admin_user(self):
         self.click("admin_add_XPATH")
-        #self.click("user_role_select_XPATH")
-        time.sleep(5)
-        self.click("employee_name_XPATH")
-        self.type("employee_name_XPATH", "Philip")
+        self.click("employee_name_CSS")
+        self.click("user_role_select_XPATH")
+        self.click("admin_admin_XPATH")
+        self.type("employee_name_CSS", "Philip")
         self.type("admin_username_XPATH", "Pnm")
+        #self.click("admin_save_btn_XPATH")

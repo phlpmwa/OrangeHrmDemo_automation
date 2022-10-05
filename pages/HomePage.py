@@ -19,3 +19,4 @@ class HomePage(BasePage):
     def go_to_PIM_page(self):
         self.click("pim_link_XPATH")
         return PimPage(self.driver)
+
