@@ -16,3 +16,9 @@ class PimPage(BasePage):
         self.type("pim_profile_picture_CSS", "C:/Users/Phlp/Pictures/image_1.png")
         time.sleep(5)
         self.click("pim_save_btn_XPATH")
+
+    def delete_employees(self):
+        for _ in range(10):
+            if self.find_elements("pim_trash_icon_CSS"):
+                self.click("pim_trash_icon_CSS")
+                self.click("pim_confirm_delete_XPATH")
