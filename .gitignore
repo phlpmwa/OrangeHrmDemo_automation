@@ -1,5 +1,5 @@
 .pytest_cache
 allure-report/
-reports/
+reports/report
 .idea
 
