@@ -1,0 +1,6 @@
+allure behave doc->https://pypi.org/project/allure-behave/
+
+creating behave allure reports
+ 1.pip install allure-behave
+ 2.behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
+ 3.allure serve %allure_result_folder%
