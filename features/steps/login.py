@@ -18,24 +18,24 @@ def step_impl(context):
     context.login.open_url(configreader.read_config("base-url", "orange_hrm_demo_site"))
 
 
-@when('user enter "{username}"')
-def step_impl(context, username):
+@when('user enter username')
+def step_impl(context):
     """
     :param username:
     :type context: behave.runner.Context
     """
-    context.login.enter_username(username)
+    context.login.enter_username("Admin")
     print("hello world")
     print(u'STEP: When user enter username')
 
 
-@then('user enter "{password}"')
-def step_impl(context, password):
+@then('user enter password')
+def step_impl(context):
     """
     :param password:
     :type context: behave.runner.Context
     """
-    context.login.enter_password(password)
+    context.login.enter_password("admin123")
     print(u'STEP: And  user enter password')
 
 
@@ -55,5 +55,4 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    assert False
     print(u'STEP: Then home page should open')
