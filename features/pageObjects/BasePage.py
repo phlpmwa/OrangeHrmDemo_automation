@@ -31,7 +31,3 @@ class BasePage:
     def find_elements(self, locator):
         if str(locator).endswith("_CSS"):
             self.driver.find_element(by=By.CSS_SELECTOR, value=read_config("locators", locator))
-
-
-
-
